@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <Button
+<!--    <Button
         android:id="@+id/btnTao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +17,17 @@
         android:id="@+id/btnDong"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="dong Notification" />
+        android:text="dong Notification" />-->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message" />
+
+    <TextView
+        android:id="@+id/txtMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
