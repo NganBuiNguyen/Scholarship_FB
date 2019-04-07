@@ -12,15 +12,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.project.firebase.FireBaseITDask;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
     Button btnTao, btnDong;
     int notificationId;
-
+    TextView txtMsg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FirebaseApp.initializeApp(this);
+        FirebaseMessaging.getInstance().subscribeToTopic("global");
+        String token = FirebaseInstanceId.getInstance().getToken();
+        new FireBaseITDask().execute(token);
         addControls();
         addEvents();
 
@@ -82,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addControls() {
-        btnTao = findViewById(R.id.btnTao);
-        btnDong = findViewById(R.id.btnDong);
+/*        btnTao = findViewById(R.id.btnTao);
+        btnDong = findViewById(R.id.btnDong);*/
+        txtMsg = findViewById(R.id.txtMsg);
     }
 }
