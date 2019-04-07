@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "939652293586",
+    "firebase_url": "https://sholarshipfb.firebaseio.com",
+    "project_id": "sholarshipfb",
+    "storage_bucket": "sholarshipfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939652293586:android:912bbea3c25ee2b1",
+        "android_client_info": {
+          "package_name": "com.example.project.notyficationmsg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBZm3Y1l9PvBFoJ3FTxvh6jsHop__J9cc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939652293586-77p9imlhurh36sok98dad0qgbvoebihr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
