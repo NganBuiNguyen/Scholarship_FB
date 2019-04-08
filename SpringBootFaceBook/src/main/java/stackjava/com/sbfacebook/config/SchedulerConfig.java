@@ -2,6 +2,7 @@ package stackjava.com.sbfacebook.config;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.http.client.ClientProtocolException;
@@ -49,9 +50,11 @@ public class SchedulerConfig {
 		// UserResponse(service.run(token)));
 		List<Post> list = service.run(token);
 		System.out.println(list.size());
+		List<String> listMessage = Arrays.asList(list.stream().map(p -> p.getMessage()));
+		System.out.println(list.size());
 		if (!list.isEmpty()) {
 			try {
-				sendMessage.send();
+				sendMessage.send(listMessage);
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

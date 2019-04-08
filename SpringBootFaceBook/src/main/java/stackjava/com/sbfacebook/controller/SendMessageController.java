@@ -37,7 +37,7 @@ public class SendMessageController {
 	SystemRepository repository;
 
 	@RequestMapping(value = "/sendMessage", method = RequestMethod.GET, produces = "application/json")
-	public ResponseEntity<String> send() throws JSONException, MessagingException, ClientProtocolException, IOException, URISyntaxException {
+	public ResponseEntity<String> send(List<String> list) throws JSONException, MessagingException, ClientProtocolException, IOException, URISyntaxException {
 
 			List<Phone> listIdDevice = repository.findAll();
 			List<String> listToken = listIdDevice.stream().map(Phone::getToken).collect(Collectors.toList());
