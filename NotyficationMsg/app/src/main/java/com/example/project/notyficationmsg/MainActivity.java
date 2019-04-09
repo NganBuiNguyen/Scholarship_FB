@@ -36,13 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void addEvents() {
-        btnTao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                taoNotifycation();
-
-            }
-        });
     }
 
     private void createNotificationChannel() {
